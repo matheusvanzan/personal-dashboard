@@ -25,17 +25,17 @@ Each Widget is an integrations to some service. You can create as many widgets a
 
 Widgets can be as simple as a Clock that gets data from the Operating System or as complex as APIs or scraping data from websites for CSS values.
 
-|    Done   |         Name         |         Source        |
-|:---------:|:--------------------:|:---------------------:|
-|  &#10004; | Simple date and time |           -           |
-|  &#10004; |    Webhook buttons   |           -           |
-|  &#10006; |    Currency Quotes   |    AlphaVantage API   |
-|  &#10006; |     Github status    |       Github API      |
-|  &#10006; |    Google calendar   |       Google API      |
-|  &#10006; |  Last email messages |      IMAP Server      |
-|  &#10006; |     MyFitnessPal     | MyFitnessPal Scraping |
-|  &#10006; |     iOS reminders    |    iCloud Scraping    |
-|  &#10006; |     Bank balances    |   Guiabolso Scraping  |
+|  Backend  | Frontend  |         Name         |         Source        |
+|:---------:|:---------:|:--------------------:|:---------------------:|
+|  &#10006; |  &#10004; | Simple date and time |           -           |
+|  &#10006; |  &#10004; |    Webhook buttons   |           -           |
+|  &#10006; |  &#10006; |    Currency Quotes   |    AlphaVantage API   |
+|  &#10006; |  &#10006; |     Github status    |       Github API      |
+|  &#10006; |  &#10006; |    Google calendar   |       Google API      |
+|  &#10006; |  &#10006; |  Last email messages |      IMAP Server      |
+|  &#10006; |  &#10006; |     MyFitnessPal     | MyFitnessPal Scraping |
+|  &#10006; |  &#10006; |     iOS reminders    |    iCloud Scraping    |
+|  &#10006; |  &#10006; |     Bank balances    |   Guiabolso Scraping  |
 
 
 ## Widget Arguments
