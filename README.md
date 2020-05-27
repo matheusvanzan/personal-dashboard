@@ -74,4 +74,4 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 
 ## Licence
 
-GNU General Public License v3.0. See (LICENSE)[https://github.com/matheusvanzan/personal-dashboard/blob/master/LICENSE]
+GNU General Public License v3.0. See [LICENSE](https://github.com/matheusvanzan/personal-dashboard/blob/master/LICENSE)
