@@ -5,8 +5,11 @@
 #
 
 from flask import Flask
+from flask import request
 from flask import jsonify
 from flask_cors import CORS
+
+import json
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -18,11 +21,11 @@ widgets = [
     {
         'id': 1,
         'type': 'webhook',
-        'name': 'IFTTT',
+        'name': 'Webhook',
         'width': 2,
-        'height': 1,
-        'left': 7,
-        'top': 1,
+        'height': 2,
+        'left': 6,
+        'top': 0,
         'data': {
             'urls': [
                 { 'name': 'Ventilador ON', 'path':  'https://maker.ifttt.com/trigger/tomada_on/with/key/bydgPA8SXGxqraluZW3UyS'},
@@ -36,8 +39,8 @@ widgets = [
         'name': '',
         'width': 2,
         'height': 2,
-        'left': 1,
-        'top': 1
+        'left': 0,
+        'top': 0
     },
     {
         'id': 3,
@@ -45,8 +48,8 @@ widgets = [
         'name': 'MyFitnessPal',
         'width': 4,
         'height': 2,
-        'left': 3,
-        'top': 1,
+        'left': 2,
+        'top': 0,
         'data': {
             'macros': [
                 { 'name': 'Carbs', 'value': 106, 'units': 'g' },
@@ -70,6 +73,25 @@ config = {
 @app.route('/config')
 def config_page():
     return jsonify(config)
+    
+    
+    
+# @app.route('/<int:year>/<int:month>/<title>')
+# def article(year, month, title):
+    
+    
+@app.route('/api/reminders/add', methods=['POST'])
+def add_reminder():
+    
+    # data = json.loads(request.data)
+    # print(data)
+    
+    print(request.data.decode('utf-8'))
+    # print(request.form)
+    
+    
+    return jsonify({})
+    
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port='8081')
