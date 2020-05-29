@@ -39,11 +39,6 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 |  &#10006; |  &#10006; |     Bank balances    |   Guiabolso Scraping  | username <br> password                          |
 
 
-## Current version 0.0.3
-
-![dashboard-current-preview](https://user-images.githubusercontent.com/4885447/83304218-d8c2b880-a1d4-11ea-8f39-4b7a69f600fb.png)
-
-
 ## Changelog
 
 #### 0.0.1
@@ -68,6 +63,10 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 - Add Widget and Config models
 - Add WidgetService and ConfigService to get data form backend
 - Add Vuex to store config and widgets data
+
+## Current version
+
+![dashboard-current-preview](https://raw.githubusercontent.com/matheusvanzan/personal-dashboard/master/screens/dashboard-current-version.png)
 
 ## Licence
 
