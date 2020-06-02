@@ -20,14 +20,14 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 
 |  Backend  | Frontend  |         Name         |         Source        |        Arguments
 |:---------:|:---------:|:--------------------:|:---------------------:|:-----------------------------------------------:|
-|  &#10006; |  &#10004; | Simple date and time |           -           | date format <br> 12h or 24h time                |
-|  &#10006; |  &#10004; |    Webhook buttons   |           -           | button names and urls                           |
+|  &#10004; |  &#10004; | Simple date and time |           -           | date format <br> 12h or 24h time                |
+|  &#10004; |  &#10004; |    Webhook buttons   |           -           | button names and urls                           |
+|  &#10004; |  &#10004; |     MyFitnessPal     |    MyFitnessPal API   | username <br> stored password                   |
 |  &#10006; |  &#10006; |      Speed test      | JavaScript speed test | frequency to check                              |
 |  &#10006; |  &#10006; |    Currency Quotes   |    AlphaVantage API   | base currency <br> currencies to check          |
 |  &#10006; |  &#10006; |     Github status    |       Github API      | username <br> password                          |
 |  &#10006; |  &#10006; |    Google calendar   |       Google API      | username <br> token                             |
 |  &#10006; |  &#10006; |  Last email messages |      IMAP Server      | IMAP host and port <br> username <br> password  |
-|  &#10006; |  &#10006; |     MyFitnessPal     | MyFitnessPal Scraping | username <br> password                          |
 |  &#10006; |  &#10006; |     iOS reminders    |   IFTTT Integration   | webhook urls                                    |
 |  &#10006; |  &#10006; |     Bank balances    |   Guiabolso Scraping  | username <br> password                          |
 
