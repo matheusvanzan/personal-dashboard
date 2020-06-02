@@ -10,9 +10,8 @@ export default class WidgetService {
         let widgets: Array<Widget> = []
 
         const response = await fetch(this.base_url + '/widgets')
-        const data = await response.json()
-        
-        console.log(data)
+        const jresponse = await response.json()
+        const data = jresponse['widgets']
 
         for (var i=0; i<data.length; i++) {
             let widget = new Widget(data[i])

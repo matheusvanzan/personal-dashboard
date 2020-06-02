@@ -9,61 +9,45 @@ from flask import request
 from flask import jsonify
 from flask_cors import CORS
 
+from datetime import datetime, date
+
+import myfitnesspal
 import json
+import yaml
+
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
+app.config['DEBUG'] = True
 
 CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
 
-widgets = [
-    {
-        'id': 1,
-        'type': 'webhook',
-        'name': 'Webhook',
-        'width': 2,
-        'height': 2,
-        'left': 6,
-        'top': 0,
-        'data': {
-            'urls': [
-                { 'name': 'Ventilador ON', 'path':  'https://maker.ifttt.com/trigger/tomada_on/with/key/bydgPA8SXGxqraluZW3UyS'},
-                { 'name': 'Ventilador OFF', 'path':  'https://maker.ifttt.com/trigger/tomada_off/with/key/bydgPA8SXGxqraluZW3UyS'}
-            ]
-        }
-    },
-    {
-        'id': 2,
-        'type': 'datetime',
-        'name': '',
-        'width': 2,
-        'height': 2,
-        'left': 0,
-        'top': 0
-    },
-    {
-        'id': 3,
-        'type': 'myfitnesspal',
-        'name': 'MyFitnessPal',
-        'width': 4,
-        'height': 2,
-        'left': 2,
-        'top': 0,
-        'data': {
-            'macros': [
-                { 'name': 'Carbs', 'value': 106, 'units': 'g' },
-                { 'name': 'Fat', 'value': 14, 'units': 'g' },
-                { 'name': 'Protein', 'value': 48, 'units': 'g' },
-                { 'name': 'Calories', 'value': 732, 'units': 'cal' }
-            ]
-        }
-    }
-]
+mfp_client = myfitnesspal.Client('vanzan2015')
+
+
 
 @app.route('/widgets')
 def widgets_page():
-    return jsonify(widgets)
+    with open('widgets.yml', 'r') as f:
+        widgets = yaml.load(f.read())
+        
+        for i, widget in enumerate(widgets['widgets']):
+            
+            widget.update({ 'id': i+1 })
+            
+            if widget['type'] == 'myfitnesspal':
+                jday = mfp_client.get_date(date.today()).totals
+                
+                widget['data'].update({ 
+                    'macros': [
+                        { 'name': 'Carbs',    'units': 'g',   'value':  jday['carbohydrates'] },
+                        { 'name': 'Fat',      'units': 'g',   'value':  jday['fat']           },
+                        { 'name': 'Protein',  'units': 'g',   'value':  jday['protein']       },
+                        { 'name': 'Calories', 'units': 'cal', 'value':  jday['calories']      }
+                    ]
+                })
+        
+        return jsonify(widgets)
     
     
 config = {

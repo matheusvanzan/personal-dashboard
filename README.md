@@ -9,13 +9,6 @@ This is a simple sketch made with Google Draw
 
 ![dashboard-sketch-white](https://user-images.githubusercontent.com/4885447/83302742-3c97b200-a1d2-11ea-86dc-3aa168a625dd.png)
 
-## Technologies
-
-- Backend with Python Flask
-- Frontend with Vue.js
-- Communication in REST
-- YAML config file
-
 
 ## Widgets
 
@@ -37,6 +30,19 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 |  &#10006; |  &#10006; |     MyFitnessPal     | MyFitnessPal Scraping | username <br> password                          |
 |  &#10006; |  &#10006; |     iOS reminders    |   IFTTT Integration   | webhook urls                                    |
 |  &#10006; |  &#10006; |     Bank balances    |   Guiabolso Scraping  | username <br> password                          |
+
+
+## Technologies
+
+- Backend with Python Flask
+- Frontend with Vue.js
+- Communication in REST
+- YAML config and data files
+
+
+## Dependencies
+
+- ![python-myfitnesspal](https://github.com/coddingtonbear/python-myfitnesspal)
 
 
 ## Changelog
@@ -63,6 +69,11 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 - Add Widget and Config models
 - Add WidgetService and ConfigService to get data form backend
 - Add Vuex to store config and widgets data
+
+### 0.0.4
+
+- Add YAML widgets file
+- Add MyFitnessPal integration
 
 ## Current version
 
