@@ -42,7 +42,7 @@ The arguments are not confirmed until I can implement the widgets. Consider that
 
 ## Dependencies
 
-- ![python-myfitnesspal](https://github.com/coddingtonbear/python-myfitnesspal)
+- [python-myfitnesspal](https://github.com/coddingtonbear/python-myfitnesspal)
 
 
 ## Changelog
