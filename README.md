@@ -3,6 +3,24 @@
 Open-source personal dashboard built with Vue and Flask to gather usefull life data to my day-to-day activities.
 
 
+## Install
+
+Backend
+
+```
+$ cd backend
+$ virtualenv --python=$(which python3) env
+$ source env/bin/activate
+$ pip install requirements.txt
+```
+
+Frontend
+
+```
+$ cd frontend
+$ npm install
+```
+
 ## Sketch
 
 This is a simple sketch made with Google Draw
